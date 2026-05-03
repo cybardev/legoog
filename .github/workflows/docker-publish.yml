@@ -90,6 +90,5 @@ jobs:
             if [ -z "$tag" ]; then continue; fi
             echo "Creating manifest for ${tag}"
             docker buildx imagetools create --tag "${tag}" \
-              "${tag}-amd64" \
-              "${tag}-arm64"
+              "${tag}-amd64"
           done
